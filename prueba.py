@@ -1,6 +1,5 @@
-
-import funciones
-
+from funciones import*
+import time,csv
 print("menu")
 print("""1. Registrar pedido.
          2. Listar todos los pedidos.
@@ -9,14 +8,15 @@ print("""1. Registrar pedido.
          5. Salir del programa.""")
 opc = int(input("que opcion desea usar"))
 if opc == 1 :
-    pass
+    opc_1()
 elif opc == 2:
-    pass
+    opc_2()
 elif opc == 3:
-    pass
+    opc_3()
 elif opc ==4:
-    pass
+    opc_4()
 elif opc == 5:
-    pass
+    opc_5()
+    
 else:
     print ("opcion no existe ")

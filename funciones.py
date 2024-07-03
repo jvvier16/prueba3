@@ -9,6 +9,8 @@ direccion = []
 comuna=[]
 cili_5 =[]
 cili_15=[]
+venta=[]
+
 def opc_1():
     nom = input("ingrese su nombre ")
     nombre.append(nom)
@@ -33,11 +35,12 @@ def opc_1():
             cili_15.append(cantidad)
             acumulador=cantidad * cilindro15
         elif opcionci==3:
+            venta.append(acumulador)
             print("pedido con exito")
             time.sleep(3)
             break
 def opc_2():
-    if rut == 0:
+    if acumulador == 0:
         print("error no hay ningun perdido")
     else:
         print(nombre)
@@ -46,6 +49,7 @@ def opc_2():
         print(comuna)
         print(cili_5)
         print(cili_15)
+        print(venta)
 def opc_3():
     buscar = int(input("ingrese el rut que esta buscando"))
     rut.index(buscar)
@@ -55,9 +59,23 @@ def opc_3():
     print(comuna)
     print(cili_5)
     print(cili_15)
+    print(venta)
+
 def opc_4():
-    pass
+    if not acumulador:
+        print("no hay compras")
+    else:
+        import datetime,csv
+        nombre_archivo= str(datetime.datetime.now()).replace("."," ").replace("."," ").replace("+"," ")
+        with open (nombre_archivo,"w",newline="")as file :
+            escritor = csv.writer(file)
+            escritor .writerows(venta)
+            
 def opc_5():
+    if acumulador== 0:
+        print("adios")
+        time.sleep
+
     print ("su pedido fue realisado adios")
     time.sleep(3)
     exit

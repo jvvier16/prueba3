@@ -1,0 +1,6 @@
+import prueba
+
+nombre= []
+rut 
+
+

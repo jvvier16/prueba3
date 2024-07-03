@@ -38,6 +38,7 @@ def opc_1():
             venta.append(acumulador)
             acumulador = acumulador*0
             print("pedido con exito")
+            time.sleep(3)
             break
     return
 def opc_2():
@@ -63,13 +64,10 @@ def opc_3():
     print(venta)
 
 def opc_4():
-    if not venta:
-        print("no hay compras")
-    else:
         import datetime,csv
         nombre_archivo =("que nombre quiere dar el archivo:")
-        nombre_archivo= str(datetime.datetime.now()).replace("."," ").replace("."," ").replace("+"," ")
-        with open (nombre_archivo,"w",newline="")as file :
+        nombre_archivo=str(datetime.datetime.now()).replace("."," ").replace("."," ").replace("+"," ")
+        with open (nombre_archivo,".csv","w",newline="")as file:
             escritor = csv.writer(file)
             escritor .writerows(venta)
             
